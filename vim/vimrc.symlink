@@ -28,6 +28,12 @@ set number
 " Use System Clipboard; handy
 set clipboard=unnamed
 
+" Lets Learn to Navigate - Arrow Keys are NOOPS
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
+
 " Backup to ~/.vim_backup with full file names
 set backup
 set backupdir=~/.dotfiles/vim/backup//

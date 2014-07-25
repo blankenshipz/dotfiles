@@ -13,8 +13,8 @@
     'vendor'
   ]
   'themes': [
-    'unity-ui'
-    'glacier-syntax'
+    'atom-dark-ui'
+    'atom-dark-syntax'
   ]
   'hideGitIgnoredFiles': true
   'disabledPackages': [
@@ -31,5 +31,5 @@
 'welcome':
   'showOnStartup': false
 'release-notes':
-  'viewedVersion': '0.89.0'
+  'viewedVersion': '0.92.0'
 'tree-view': {}

@@ -1,4 +1,8 @@
+" Show Syntax Highlighting
 syntax on
+
+" We're running VIM, not VI!
+set nocompatible
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
@@ -8,3 +12,18 @@ set list listchars=tab:▸\ ,trail:. " highlights trailing space
 
 " Highlight Found Text
 set hlsearch
+
+" Tabs are two spaces
+set tabstop=2
+
+" A shift << >> is two spaces
+set shiftwidth=2
+
+" A tab in insert mode is two spaces
+set expandtab
+
+" Show Line Numbers
+set number
+
+" Use System Clipboard; handy
+set clipboard=unnamed

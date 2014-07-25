@@ -8,7 +8,7 @@ set nocompatible
 filetype indent plugin on
 
 " Show Trailing Whitespace
-set list listchars=tab:▸\ ,trail:. " highlights trailing space
+set list listchars=tab:▸\ ,trail:.
 
 " Highlight Found Text
 set hlsearch
@@ -27,3 +27,8 @@ set number
 
 " Use System Clipboard; handy
 set clipboard=unnamed
+
+" Backup to ~/.vim_backup with full file names
+set backup
+set backupdir=~/.dotfiles/vim/backup//
+set dir=~/.dotfiles/vim/swp//

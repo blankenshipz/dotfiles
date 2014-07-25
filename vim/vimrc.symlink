@@ -2,3 +2,9 @@ syntax on
 
 " Wrap gitcommit file types at the appropriate length
 filetype indent plugin on
+
+" Show Trailing Whitespace
+set list listchars=tab:▸\ ,trail:. " highlights trailing space
+
+" Highlight Found Text
+set hlsearch

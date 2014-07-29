@@ -1,3 +1,6 @@
+" Install our Plugins in /bundle with pathogen.vim
+execute pathogen#infect()
+
 " Show Syntax Highlighting
 syntax on
 

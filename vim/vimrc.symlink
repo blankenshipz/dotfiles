@@ -31,6 +31,10 @@ set number
 " Use System Clipboard; handy
 set clipboard=unnamed
 
+" Splits occur to the right or down
+set splitright
+set splitbelow
+
 " Lets Learn to Navigate - Arrow Keys are NOOPS
 noremap <Up> <NOP>
 noremap <Down> <NOP>

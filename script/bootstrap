@@ -140,6 +140,7 @@ install_dotfiles () {
   link_file ~/.dotfiles/vim/autoload ~/.vim/autoload
   link_file ~/.dotfiles/vim/bundle ~/.vim/bundle
   link_file ~/.dotfiles/vim/swp ~/.vim/swp
+  link_file ~/.dotfiles/vim/colors ~/.vim/colors
 }
 
 setup_gitconfig

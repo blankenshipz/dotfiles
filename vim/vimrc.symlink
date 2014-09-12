@@ -56,3 +56,6 @@ set dir=~/.vim/swp//
 
 " Set our Colorscheme
 colorscheme hybrid
+
+" Keep our window history when going to the background
+set t_ti= t_te=

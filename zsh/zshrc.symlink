@@ -38,10 +38,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 export DEV_BOX=$HOME/devbox
 
-alias rake='noglob rake'
-alias vup="cd $DEV_BOX;vagrant up;"
-alias vhalt="cd $DEV_BOX; vagrant halt;"
-alias vssh="cd $DEV_BOX; vagrant ssh;"
-alias apps="cd $DEV_BOX/apps"
-alias gems="cd $DEV_BOX/gems"
-alias vim="/usr/local/Cellar/macvim/7.3-66/bin/vim" #use macvim for system clipboard access
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/zachblankenship/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+

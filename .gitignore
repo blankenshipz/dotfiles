@@ -5,3 +5,4 @@ atom.symlink/storage
 atom.symlink/themes
 atom.symlink/compile-cache/
 git/gitconfig.symlink
+vim/swp

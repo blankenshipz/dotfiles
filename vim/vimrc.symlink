@@ -36,7 +36,15 @@ set clipboard=unnamed
 set splitright
 set splitbelow
 
-" Lets Learn to Navigate - Arrow Keys are NOOPS
+" Various Mappings
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+" Lets Learn to Navigate - Arrow Keys Map to NOOPS
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>

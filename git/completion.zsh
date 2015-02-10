@@ -3,6 +3,8 @@
 # tosses it, at least).
 completion='$(brew --prefix)/share/zsh/site-functions/_git'
 
+eval "$(hub alias -s)"
+
 if test -f $completion
 then
   source $completion

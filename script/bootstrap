@@ -135,6 +135,8 @@ install_dotfiles () {
     link_file "$src" "$dst"
   done
 
+  mkdir ~/.vim
+
   link_file ~/.dotfiles/vim/plugin ~/.vim/plugin
   link_file ~/.dotfiles/vim/backup ~/.vim/backup
   link_file ~/.dotfiles/vim/autoload ~/.vim/autoload

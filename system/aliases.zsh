@@ -8,3 +8,5 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
+
+alias octave='docker run -it --rm -v $(pwd):/host -w "/host" simexp/octave:3.8.1'

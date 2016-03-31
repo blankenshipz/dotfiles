@@ -72,6 +72,9 @@ let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
 colorscheme hybrid
 
+" show a marker at 80th character
+set colorcolumn=80
+
 " Keep our window history when going to the background
 set t_ti= t_te=
 

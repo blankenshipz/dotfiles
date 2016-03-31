@@ -60,6 +60,10 @@ nmap <C-L> <C-W><C-L>
 set backup
 set backupdir=~/.vim/backup//
 
+" Keep undo history across sessions
+set undodir=~/.dotfiles/vim/undo
+set undofile
+
 " Keep SWP files well named and in a safe place
 set dir=~/.vim/swp//
 

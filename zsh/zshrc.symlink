@@ -37,4 +37,7 @@ export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/bin
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # Run this command to configure your docker-machine dev shell:
-eval $(docker-machine env default)
+eval $(docker-machine env dinghy)
+
+# Why?
+alias ding=dinghy

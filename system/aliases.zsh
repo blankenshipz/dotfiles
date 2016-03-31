@@ -10,7 +10,7 @@ then
 fi
 
 alias octave='docker run -it --rm -v $(pwd):/host -w "/host" simexp/octave:3.8.1'
-alias dev='
+alias nib='
   docker run \
     -it \
     --rm \
@@ -19,14 +19,30 @@ alias dev='
     -v ~/.ssh/id_dsa:/root/.ssh/id_rsa:ro \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
-    technekes/devbox'
-alias ldev='
+    technekes/nib'
+alias psql='
+  docker run                                                       \
+     -it                                                           \
+     --rm                                                          \
+     -v /var/run/docker.sock:/var/run/docker.sock                  \
+     -v /tmp                                                       \
+     -v $(pwd):$(pwd)                                              \
+     -w $(pwd)                                                     \
+     -e "EDITOR=docker run          \
+            -it                     \
+            --rm                    \
+            --volumes-from=psql     \
+            -w $(pwd)               \
+            haron/vim"                                             \
+     --name psql                                                   \
+     psql'
+alias nibdev='
   docker run \
     -it \
     --rm \
     -v $(pwd):$(pwd) \
-    -w $(pwd)\
-    -v ~/.ssh/id_dsa:/root/.ssh/id_rsa:ro \
+    -w $(pwd) \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
-    dev'
+    nibdev:latest'
+alias psqld='psql -h foo.docker -p 5432 -U postgres'

@@ -45,4 +45,4 @@ alias nibdev='
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
     nibdev:latest'
-alias psqld='psql -h foo.docker -p 5432 -U postgres'
+alias psqld='psql -h localhost -p 5432 -U postgres'

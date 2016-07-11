@@ -1,6 +1,7 @@
 " Install our Plugins in /bundle with pathogen.vim
 " " includes nerdtree, vim-surround, et al
 execute pathogen#infect()
+Helptags
 
 " Show Syntax Highlighting
 syntax on

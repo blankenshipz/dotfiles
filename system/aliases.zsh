@@ -8,18 +8,32 @@ then
   alias ll="gls -l --color"
   alias la='gls -A --color'
 fi
-
-alias octave='docker run -it --rm -v $(pwd):/host -w "/host" simexp/octave:3.8.1'
-alias nib='
+alias elixir='
   docker run \
     -it \
     --rm \
-    -v $(pwd):$(pwd) \
-    -w $(pwd)\
-    -v ~/.ssh/id_dsa:/root/.ssh/id_rsa:ro \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -e "DOCKER_HOST_URL=$DOCKER_HOST" \
-    technekes/nib'
+    -v "$PWD":"$PWD" \
+    -w "$PWD" \
+    blankenshipz/elixir-phoenix \
+    elixir'
+
+alias iex='
+  docker run \
+    -it \
+    --rm \
+    -v "$PWD":"$PWD" \
+    -w "$PWD" \
+    blankenshipz/elixir-phoenix'
+
+alias mix='
+  docker run \
+    -it \
+    --rm \
+    -v "$PWD":"$PWD" \
+    -w "$PWD" \
+    blankenshipz/elixir-phoenix \
+    mix'
+alias octave='docker run -it --rm -v $(pwd):/host -w "/host" simexp/octave:3.8.1'
 alias psql='
   docker run                                                       \
      -it                                                           \
@@ -46,3 +60,13 @@ alias nibdev='
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
     nibdev:latest'
 alias psqld='psql -h localhost -p 5432 -U postgres'
+alias nib='
+  docker run \
+    -it \
+    --rm \
+    -v $(pwd):$(pwd) \
+    -w $(pwd) \
+    -v $HOME/.docker:/root/.docker:ro \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -e "DOCKER_HOST_URL=$DOCKER_HOST" \
+    technekes/nib:latest'

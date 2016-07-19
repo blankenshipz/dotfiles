@@ -69,7 +69,7 @@ alias nib='
     -v $HOME/.docker:/root/.docker:ro \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
-    technekes/nib:latest'
+    technekes/nib:beta'
 alias rust-static-release='
   docker run \
     -it \

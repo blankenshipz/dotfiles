@@ -70,3 +70,11 @@ alias nib='
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e "DOCKER_HOST_URL=$DOCKER_HOST" \
     technekes/nib:latest'
+alias rust-static-release='
+  docker run \
+    -it \
+    --rm \
+    -v $PWD:$PWD \
+    -w $PWD \
+    liuchong/rustup:musl \
+    sh -c "cargo build --release && chown -R $(id -u):$(id -g) target"'

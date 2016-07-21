@@ -40,3 +40,6 @@
 [submodule "vim/bundle/dbext"]
 	path = vim/bundle/dbext
 	url = git@github.com:vim-scripts/dbext.vim.git
+[submodule "vim/bundle/rust.vim"]
+	path = vim/bundle/rust.vim
+	url = git@github.com:rust-lang/rust.vim.git

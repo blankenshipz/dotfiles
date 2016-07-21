@@ -6,8 +6,8 @@ var keys = [];
 var triple = ['ctrl', 'alt', 'cmd'];
 
 // left half
-keys.push(Phoenix.bind('h', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('h', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -18,8 +18,8 @@ keys.push(Phoenix.bind('h', triple, function() {
     });
 }));
 // right half
-keys.push(Phoenix.bind('l', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('l', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -30,8 +30,8 @@ keys.push(Phoenix.bind('l', triple, function() {
     });
 }));
 // left two third
-keys.push(Phoenix.bind('i', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('i', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -42,8 +42,8 @@ keys.push(Phoenix.bind('i', triple, function() {
     });
 }));
 // right two third
-keys.push(Phoenix.bind('o', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('o', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -54,8 +54,8 @@ keys.push(Phoenix.bind('o', triple, function() {
     });
 }));
 // right third
-keys.push(Phoenix.bind('right', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('right', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -66,8 +66,8 @@ keys.push(Phoenix.bind('right', triple, function() {
     });
 }));
 // left third
-keys.push(Phoenix.bind('left', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('left', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -78,8 +78,8 @@ keys.push(Phoenix.bind('left', triple, function() {
     });
 }));
 // middle third
-keys.push(Phoenix.bind('down', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('down', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame({
@@ -91,16 +91,16 @@ keys.push(Phoenix.bind('down', triple, function() {
 }));
 
 // fill screen
-keys.push(Phoenix.bind('f', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('f', triple, function() {
+    var window = Window.focused(),
         screen = window.screen().visibleFrameInRectangle();
 
     window.setFrame(screen);
 }));
 
 // move to next screen
-keys.push(Phoenix.bind('n', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('n', triple, function() {
+    var window = Window.focused(),
         oldWindow = window.frame(),
         oldScreen = window.screen().visibleFrameInRectangle(),
         screen = window.screen().previous().visibleFrameInRectangle();
@@ -113,8 +113,8 @@ keys.push(Phoenix.bind('n', triple, function() {
     });
 }));
 // move to previous screen
-keys.push(Phoenix.bind('p', triple, function() {
-    var window = Window.focusedWindow(),
+keys.push(new Key('p', triple, function() {
+    var window = Window.focused(),
         oldWindow = window.frame(),
         oldScreen = window.screen().visibleFrameInRectangle(),
         screen = window.screen().next().visibleFrameInRectangle();

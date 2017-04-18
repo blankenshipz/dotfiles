@@ -30,6 +30,9 @@ set expandtab
 " Show Line Numbers
 set number
 
+" Complete settings
+set wildmenu
+
 " Use System Clipboard; handy
 set clipboard=unnamed
 

@@ -8,3 +8,7 @@ agl() {
   $EDITOR $(agf $@)
 }
 
+# Copy the working directory the clipboard
+wdcopy() {
+  pwd | tr -d '\n' | pbcopy
+}

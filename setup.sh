@@ -1,4 +1,20 @@
-## Apps
+## Clone thyself
+if [ ! -d "$HOME/.dotfiles" ]; then
+  echo "Cloning the dotfiles repo to this machine..."
+
+  git clone --bare https://github.com/blankenshipz/dotfiles.git $HOME/.dotfiles
+
+  # Checkout (dot)files into $HOME
+  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
+
+  # Cleanup the status for this repo
+  git \
+    --git-dir=$HOME/.dotfiles/ \
+    --work-tree=$HOME config \
+    --local status.showUntrackedFiles no
+fi
+
+## Install Apps
 
 # Install homebrew
 if ! hash brew 2>/dev/null; then
@@ -11,6 +27,7 @@ fi
 brew tap Homebrew/bundle
 
 echo "Installing from Brewfile"
+
 # Install all the things! (see the Brewfile)
 brew bundle
 

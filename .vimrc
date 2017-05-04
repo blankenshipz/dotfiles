@@ -73,7 +73,7 @@ set backup
 set backupdir=~/.vim/backup//
 
 " Keep undo history across sessions
-set undodir=~/.dotfiles/vim/undo
+set undodir=~/.vim/undo
 set undofile
 
 " Disable swap files

@@ -1,14 +1,9 @@
-" Install our Plugins in /bundle with pathogen.vim
-" " includes nerdtree, vim-surround, et al
-"
-"
+" Install plugins
 call plug#begin('~/.vim/plugged')
-
 Plug 'jscrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-
 call plug#end()
 
 " Show Syntax Highlighting

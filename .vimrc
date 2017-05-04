@@ -76,8 +76,8 @@ set backupdir=~/.vim/backup//
 set undodir=~/.dotfiles/vim/undo
 set undofile
 
-" Keep SWP files well named and in a safe place
-set dir=~/.vim/swp//
+" Disable swap files
+set updatecount=0
 
 " Set our Colorscheme
 let g:hybrid_custom_term_colors = 1

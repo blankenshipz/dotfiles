@@ -1,6 +1,6 @@
 " Install plugins
 call plug#begin('~/.vim/plugged')
-Plug 'jscrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'

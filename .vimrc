@@ -1,6 +1,7 @@
 " Install plugins
 call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -83,3 +84,4 @@ set t_ti= t_te=
 
 " Disable Ex Mode
 map Q <Nop>
+

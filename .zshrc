@@ -1,7 +1,3 @@
-# Set vim as the editor
-export EDITOR=vim
-export VISUAL=vim
-
 # Setup prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -42,3 +38,8 @@ export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
 
 # Setup an alias for managing this configuration
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Set vim as the editor
+export EDITOR=vim
+export VISUAL=vim
+

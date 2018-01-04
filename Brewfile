@@ -2,7 +2,9 @@
 cask_args appdir: '/Applications'
 
 tap 'caskroom/cask'
+tap 'crisidev/homebrew-chunkwm'
 
+brew 'chunkwm'
 brew 'coreutils'
 brew 'erlang'
 brew 'exercism'

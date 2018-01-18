@@ -7,6 +7,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
+Plug 'w0ng/vim-hybrid'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 " Show Syntax Highlighting

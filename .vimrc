@@ -72,9 +72,8 @@ set undofile
 set updatecount=0
 
 " Set our Colorscheme
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1 " Remove this line if using the default palette.
-colorscheme hybrid
+set background=dark
+colorscheme nord
 
 " show a marker at 80th character
 set colorcolumn=80

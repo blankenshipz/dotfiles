@@ -9,6 +9,8 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'w0ng/vim-hybrid'
 Plug 'arcticicestudio/nord-vim'
+Plug 'elmcast/elm-vim'
+Plug 'kristijanhusak/vim-hybrid-material'
 call plug#end()
 
 " Show Syntax Highlighting
@@ -75,7 +77,7 @@ set updatecount=0
 
 " Set our Colorscheme
 set background=dark
-colorscheme nord
+colorscheme hybrid
 
 " show a marker at 80th character
 set colorcolumn=80

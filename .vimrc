@@ -88,3 +88,11 @@ set t_ti= t_te=
 " Disable Ex Mode
 map Q <Nop>
 
+" Spellcheck md files
+autocmd BufRead,BufNewFile *.md setlocal spell
+
+" Spellcheck commits
+autocmd FileType gitcommit setlocal spell
+
+" Word complete
+set complete+=kspell

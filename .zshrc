@@ -3,7 +3,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# # Setup fzf
+# Setup fzf
 # ---------
 if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
   export PATH="$PATH:/usr/local/opt/fzf/bin"
@@ -38,6 +38,15 @@ export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
 
 # Setup an alias for managing this configuration
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Normal Aliases
+alias ao='aws-okta exec'
+alias aods='aws-okta exec ds'
+alias tf='terraform'
+alias scratch='mkdir -p ~/Code/scratchpad && cd ~/Code/scratchpad && nvim .'
+alias todo='rg "(?:\*|-) \[ \]" ~/vimwiki'
+alias todos='todo'
+alias wiki='nvim ~/vimwiki/index.md'
 
 # Set vim as the editor
 export EDITOR=vim

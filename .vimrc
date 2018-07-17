@@ -1,16 +1,18 @@
 " Install plugins
 call plug#begin('~/.vim/plugged')
+Plug 'arcticicestudio/nord-vim'
+Plug 'elmcast/elm-vim'
+Plug 'hashivim/vim-terraform'
 Plug 'kien/ctrlp.vim'
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'rust-lang/rust.vim'
+Plug 'sbdchd/vim-hybrid'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
-Plug 'sbdchd/vim-hybrid'
-Plug 'arcticicestudio/nord-vim'
-Plug 'elmcast/elm-vim'
-Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " Show Syntax Highlighting
@@ -96,3 +98,13 @@ autocmd FileType gitcommit setlocal spell
 
 " Word complete
 set complete+=kspell
+
+" Setup vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" Special template for meetings
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile **/meetings/*.md 0r ~/.vim/templates/meeting.md
+  augroup END
+endif

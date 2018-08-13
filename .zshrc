@@ -19,6 +19,7 @@ fi
 # ---------------
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
+
 # Key bindings
 # ------------
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
@@ -32,9 +33,9 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Setup openssl dirs
-export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
-export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
-export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
+# export OPENSSL_INCLUDE_DIR=`brew --prefix openssl`/include
+# export OPENSSL_LIB_DIR=`brew --prefix openssl`/lib
+# export DEP_OPENSSL_INCLUDE=`brew --prefix openssl`/include
 
 # Setup an alias for managing this configuration
 alias dot='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

@@ -48,6 +48,10 @@ alias scratch='mkdir -p ~/Code/scratchpad && cd ~/Code/scratchpad && nvim .'
 alias todo='rg "(?:\*|-) \[ \]" ~/vimwiki'
 alias todos='todo'
 alias wiki='nvim ~/vimwiki/index.md'
+alias gpfwl='git push --force-with-lease'
+alias gpf='gpfwl'
+alias dgb='docker run --rm -it -v ~/.ssh:/root/.ssh -v $PWD:/go/src/app -w /go/src/app golang:latest /bin/bash -c "go build"'
+alias docker-go-build='dgb'
 
 # Set vim as the editor
 export EDITOR=vim

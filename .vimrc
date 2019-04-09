@@ -1,7 +1,10 @@
 " Install plugins
 call plug#begin('~/.vim/plugged')
 Plug 'arcticicestudio/nord-vim'
+Plug 'bazelbuild/vim-ft-bzl'
 Plug 'elmcast/elm-vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'hashicorp/sentinel.vim'
 Plug 'hashivim/vim-terraform'
 Plug 'kien/ctrlp.vim'
 Plug 'kristijanhusak/vim-hybrid-material'
@@ -102,9 +105,11 @@ set complete+=kspell
 " Setup vimwiki
 let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
 
-" Special template for meetings
+" Special templates for meetings
 if has("autocmd")
   augroup templates
     autocmd BufNewFile **/meetings/*.md 0r ~/.vim/templates/meeting.md
+    autocmd BufNewFile **/reviews/*self*.md 0r ~/.vim/templates/self-assessment.md
+    autocmd BufNewFile **/reviews/*.md 0r ~/.vim/templates/review.md
   augroup END
 endif

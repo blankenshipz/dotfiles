@@ -35,6 +35,9 @@ brew 'terraform_landscape'
 brew 'tree'
 brew 'vim'
 brew 'zsh'
+brew 'golang'
+brew 'docker-compose'
+brew 'dep'
 
 # Casks
 cask 'atom'

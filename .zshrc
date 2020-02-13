@@ -57,3 +57,6 @@ alias docker-go-build='dgb'
 export EDITOR=vim
 export VISUAL=vim
 
+# GO Dev?
+export GOPATH=$HOME/Code/go
+export PATH=$PATH:$GOPATH/bin

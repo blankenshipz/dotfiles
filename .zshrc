@@ -45,7 +45,7 @@ alias ao='aws-okta exec'
 alias aods='aws-okta exec ds'
 alias tf='terraform'
 alias scratch='mkdir -p ~/Code/scratchpad && cd ~/Code/scratchpad && nvim .'
-alias todo='rg "(?:\*|-) \[ \]" ~/vimwiki'
+alias todo='rg "(?:\*|-) \[ \]" ~/vimwiki/meetings'
 alias todos='todo'
 alias wiki='nvim ~/vimwiki/index.md'
 alias gpfwl='git push --force-with-lease'
@@ -60,3 +60,9 @@ export VISUAL=vim
 # GO Dev?
 export GOPATH=$HOME/Code/go
 export PATH=$PATH:$GOPATH/bin
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/zach/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/zach/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/zach/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/zach/google-cloud-sdk/completion.zsh.inc'; fi
